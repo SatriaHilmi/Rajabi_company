@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Bgslider } from "../components/Bgslider";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Home (nama perusahaan)">
+	<section class="relative py-30 overflow-hidden">
+		<Bgslider client:load />
+
+		<div class="absolute inset-0 bg-black/60"></div>
+
+		<div class="relative z-10 px-4 md:px-5 top-15">
+			<div class="max-w-xl md:max-w-2xl">
+				<h1
+					class="text-4xl md:text-7xl font-extrabold leading-[1.05] mb-4"
+				>
+					<span class="block text-white">Perusahaan Kayu</span>
+					<span class="block text-green-500">Terbaik</span>
+					<span class="block text-white">di Indonesia</span>
+				</h1>
+				<div
+					class="border-l-4 border-green-500 pl-4 md:pl-6 rounded-md"
+				>
+					<p
+						class="text-sm md:text-lg font-medium text-gray-300 leading-relaxed mb-5"
+					>
+						Menyediakan berbagai macam produk kayu berkualitas
+						tinggi, hadir di berbagai kota yang berpusat di Kota
+						Probolinggo Jawa Timur.
+					</p>
+
+					<h2
+						class="text-white text-xl md:text-2xl font-semibold tracking-wide"
+					>
+						UD. SUMBER REJEKI
+					</h2>
+				</div>
+			</div>
+		</div>
+		<div
+			class="absolute bottom-0 left-0 right-0 bg-linear-to-t h-18 from-white to-transparent z-10"
+		>
+		</div>
+	</section>
+
+	<Card />
+
+	<div class="mx-auto max-w-xl md:max-w-3xl my-20 px-4">
+		<h2
+			class="text-3xl md:text-4xl font-bold mb-5 text-center text-green-700"
+		>
+			UD. Sumber Rejeki
+		</h2>
+		<div class="border-l-4 border-green-500 pl-4 md:pl-5 rounded-md">
+			<p class="text-lg md:text-xl text-gray-700 mb-5 leading-relaxed">
+				UD. Sumber Rejeki adalah perusahaan perdagangan kayu yang
+				berbasis di Kota Probolinggo Jawa Timur, Indonesia. Berbekal
+				pengalaman bertahun-tahun dalam industri perkayuan, kami telah
+				memantapkan posisi sebagai penyedia utama kayu keras berkualitas
+				tinggi, dengan spesialisasi khusus pada Kayu Sonokeling (East
+				Indian Rosewood). Kami memahami bahwa kayu bukan sekadar
+				material bangunan, melainkan investasi nilai estetika dan
+				ketahanan. Oleh karena itu, UD. Sumber Rejeki berkomitmen untuk
+				menyediakan material kayu yang telah melalui proses seleksi
+				ketat demi memenuhi standar kebutuhan industri furnitur mewah,
+				instrumen musik, hingga kebutuhan ekspor.
+			</p>
+		</div>
+		<a href="/about" class="text-green-500 hover:underline font-semibold"
+			>Learn More About Us</a
+		>
+	</div>
+	<div class="border w-50 md:w-1/2 mx-auto my-5 border-green-500 rounded-md">
+	</div>
+
+	<!-- <h1 class="text-4xl md:text-6xl font-bold mb-4">
+		Welcome to Rajabi Company
+	</h1>
+	<p class="text-lg md:text-2xl mb-8">
+		Your trusted partner in quality services
+	</p>
+	<a
+		href="/contact"
+		class="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+		>Get in Touch</a
+	> -->
+</Layout>

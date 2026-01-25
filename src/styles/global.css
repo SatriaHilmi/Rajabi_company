@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* html {
+    scrollbar-gutter: stable both-edges;
+} */
+/* @layer utilities {
+    .cube-layer {
+        outline: 2px solid red;
+    }
+} */
+
+
+/* @layer utilities {
+    .cube-layer {
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 70px 70px;
+        transform: perspective(800px) rotateX(55deg);
+    }
+
+    .cube-1 {
+        animation: cubeMove1 14s linear infinite;
+    }
+
+    .cube-2 {
+        background-size: 40px 40px;
+        animation: cubeMove2 10s linear infinite reverse;
+    }
+
+    @keyframes cubeMove1 {
+        from {
+            background-position: 0 0;
+            transform: perspective(800px) rotateX(55deg) translateY(0);
+        }
+
+        to {
+            background-position: 300px 300px;
+            transform: perspective(800px) rotateX(55deg) translateY(-60px);
+        }
+    }
+
+    @keyframes cubeMove2 {
+        from {
+            background-position: 0 0;
+            transform: perspective(800px) rotateX(55deg) translateY(0);
+        }
+
+        to {
+            background-position: 200px 200px;
+            transform: perspective(800px) rotateX(55deg) translateY(-40px);
+        }
+    }
+} */

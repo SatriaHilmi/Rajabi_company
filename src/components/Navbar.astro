@@ -1,0 +1,87 @@
+---
+import { Hamburger } from "./Hamburger";
+import { X } from "lucide-react";
+const path = Astro.url.pathname.toLowerCase();
+// const isOpen = false;
+---
+
+<div class="sticky top-0 left-0 right-0 z-50 shadow-lg bg-white">
+    <div class="flex justify-between items-center p-3">
+        <img
+            src="/kayu-raja.png"
+            alt="Logo"
+            class="h-20 w-40 md:w-50 object-cover"
+        />
+        <nav class="hidden md:flex space-x-4">
+            <a
+                href="/"
+                class={`hover:text-green-500 ${path === "/" ? "font-semibold text-green-500" : ""}`}
+                >Home</a
+            >
+            <a
+                href="/about"
+                class={`hover:text-green-500 ${path === "/about" ? "font-semibold text-green-500" : ""}`}
+                >About</a
+            >
+            <a
+                href="/services"
+                class={`hover:text-green-500 ${path === "/services" ? "font-semibold text-green-500" : ""}`}
+                >Services</a
+            >
+            <a
+                href="/contact"
+                class={`hover:text-green-500 ${path === "/contact" ? "font-semibold text-green-500" : ""}`}
+                >Contact</a
+            >
+        </nav>
+        <div class="md:hidden">
+            <Hamburger targetId="mobile-menu" client:load />
+        </div>
+    </div>
+    <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 z-50 h-screen w-60 p-4 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
+    >
+        <div class="relative flex items-center justify-between p-2 border-b">
+            <img
+                src="/kayu-raja.png"
+                alt="Logo"
+                class="h-20 w-40 object-cover"
+            />
+
+            <!-- Tombol X di dalam menu -->
+            <button
+                id="close-mobile-btn"
+                class="p-2 rounded-md text-black"
+                aria-label="Close menu"
+            >
+                <X size={24} />
+            </button>
+        </div>
+        <nav
+            class="flex flex-col mt-4 space-y-4 text-center text-sm md:text-base"
+        >
+            <a
+                href="/"
+                class={`hover:text-green-500 ${path === "/" ? "font-semibold text-green-500" : ""}`}
+                >Home</a
+            >
+            <a
+                href="/about"
+                class={`hover:text-green-500 ${path === "/about" ? "font-semibold text-green-500" : ""}`}
+                >About</a
+            >
+            <a
+                href="/services"
+                class={`hover:text-green-500 ${path === "/services" ? "font-semibold text-green-500" : ""}`}
+                >Services</a
+            >
+            <a
+                href="/contact"
+                class={`hover:text-green-500 ${path === "/contact" ? "font-semibold text-green-500" : ""}`}
+                >Contact</a
+            >
+            <div class="border-b w-25 mx-auto"></div>
+        </nav>
+    </div>
+</div>
