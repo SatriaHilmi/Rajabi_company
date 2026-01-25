@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import { Bgslider } from "../components/Bgslider";
+import { Produk } from "../components/Produk";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -74,8 +75,24 @@ import { Bgslider } from "../components/Bgslider";
 			>Learn More About Us</a
 		>
 	</div>
-	<div class="border w-50 md:w-1/2 mx-auto my-5 border-green-500 rounded-md">
+
+	<div class="mx-auto max-w-xl md:max-w-3xl px-4 my-20">
+		<h1
+			class="text-3xl md:text-4xl font-bold mb-5 text-center text-green-700"
+		>
+			PRODUK KAMI
+		</h1>
+		<div class="border-l-4 border-green-500 pl-4 md:pl-5 rounded-md">
+			<p class="text-lg md:text-xl text-gray-700 mb-5 leading-relaxed">
+				Kami dikenal sebagai spesialis kayu Sonokeling yang memiliki
+				corak warna ungu kecokelatan yang eksotis dengan serat kayu yang
+				sangat kuat. Produk Sonokeling kami tersedia dalam bentuk Log
+				(Kayu Gelondongan), dan Papan (Sawn Timber).
+			</p>
+		</div>
 	</div>
+
+	<Produk />
 
 	<!-- <h1 class="text-4xl md:text-6xl font-bold mb-4">
 		Welcome to Rajabi Company
