@@ -5,6 +5,15 @@ html {
     scroll-behavior: smooth;
 }
 
+details .dropdown-content {
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+details[open] .dropdown-content {
+    max-height: 200px;
+}
+
 /* html {
     scrollbar-gutter: stable both-edges;
 } */
