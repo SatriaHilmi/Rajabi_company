@@ -19,20 +19,20 @@ const path = Astro.url.pathname.toLowerCase();
                 >Home</a
             >
             <a
-                href="/about"
+                href="/About"
                 class={`hover:text-green-500 ${path === "/about" ? "font-semibold text-green-500" : ""}`}
                 >About</a
             >
             <a
-                href="/services"
+                href="/Contact"
                 class={`hover:text-green-500 ${path === "/services" ? "font-semibold text-green-500" : ""}`}
-                >Services</a
+                >Contact</a
             >
-            <a
+            <!-- <a
                 href="/contact"
                 class={`hover:text-green-500 ${path === "/contact" ? "font-semibold text-green-500" : ""}`}
                 >Contact</a
-            >
+            > -->
         </nav>
         <div class="md:hidden">
             <Hamburger targetId="mobile-menu" client:load />
@@ -42,7 +42,9 @@ const path = Astro.url.pathname.toLowerCase();
         id="mobile-menu"
         class="fixed top-0 right-0 z-50 h-screen w-60 p-4 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden"
     >
-        <div class="relative flex items-center justify-between p-2 border-b">
+        <div
+            class="relative flex items-center justify-between p-2 border-b border-green-500"
+        >
             <img
                 src="/kayu-raja.png"
                 alt="Logo"
@@ -67,21 +69,21 @@ const path = Astro.url.pathname.toLowerCase();
                 >Home</a
             >
             <a
-                href="/about"
+                href="/About"
                 class={`hover:text-green-500 ${path === "/about" ? "font-semibold text-green-500" : ""}`}
                 >About</a
             >
             <a
-                href="/services"
+                href="/Contact"
                 class={`hover:text-green-500 ${path === "/services" ? "font-semibold text-green-500" : ""}`}
-                >Services</a
+                >Contact</a
             >
-            <a
+            <!-- <a
                 href="/contact"
                 class={`hover:text-green-500 ${path === "/contact" ? "font-semibold text-green-500" : ""}`}
                 >Contact</a
-            >
-            <div class="border-b w-25 mx-auto"></div>
+            > -->
+            <div class="border-b border-green-500 w-25 mx-auto"></div>
         </nav>
     </div>
 </div>

@@ -1,0 +1,81 @@
+---
+import { PhoneCall } from "lucide-react";
+import { CreditCard } from "lucide-react";
+---
+
+<footer class="relative mt-20 bg-green-700 text-white overflow-hidden">
+    <!-- efek glow background -->
+    <div
+        class="absolute inset-0 bg-linier-to-tr from-white/10 via-transparent to-black/10"
+    >
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-5 py-14">
+        <!-- 2 Bagian -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Kiri -->
+            <div>
+                <h2 class="text-2xl font-bold tracking-wide">
+                    Kontak & Rekening
+                </h2>
+                <p class="text-white/80 mt-2 text-sm md:text-base">
+                    Hubungi kami atau lakukan pembayaran melalui rekening
+                    berikut.
+                </p>
+
+                <div class="mt-6 space-y-4 text-sm md:text-base">
+                    <div class="flex items-start gap-3">
+                        <span class="text-white/70"><PhoneCall /></span>
+                        <span class="text-white/40">:</span>
+                        <a
+                            href="https://wa.me/6282258247255?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20produk%20UD.%20Sumber%20Rejeki."
+                            target="_blank"
+                            class="font-semibold hover:text-white/80 transition underline underline-offset-4"
+                            rel="noopener noreferrer"
+                        >
+                            0822 5824 7255
+                        </a>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <span class="text-white/70"><CreditCard /></span>
+                        <span class="text-white/40">:</span>
+                        <span class="font-semibold">(BRI) 007301002579567</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan -->
+            <div class="md:pl-10 md:border-l md:border-white/20">
+                <h2 class="text-2xl font-bold tracking-wide">
+                    Alamat Perusahaan
+                </h2>
+                <p class="text-white/80 mt-2 text-sm md:text-base">
+                    Lokasi kantor & operasional kami.
+                </p>
+
+                <p
+                    class="mt-6 text-sm md:text-base leading-relaxed max-w-md text-white/90"
+                >
+                    Jln. Raya Bantaran, Desa Kedungsupit, Kec. Wonomerto, Kab.
+                    Probolinggo, Jawa Timur
+                </p>
+            </div>
+        </div>
+
+        <!-- Bottom -->
+        <div
+            class="mt-12 border-t border-white/20 pt-6 flex flex-col md:flex-row items-center justify-between gap-3"
+        >
+            <p class="text-sm text-white/70">
+                © 2026 UD. Sumber Rejeki. All rights reserved.
+            </p>
+
+            <div class="flex items-center gap-4 text-sm text-white/70">
+                <a href="#" class="hover:text-white transition">Privacy</a>
+                <span class="text-white/30">•</span>
+                <a href="#" class="hover:text-white transition">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
