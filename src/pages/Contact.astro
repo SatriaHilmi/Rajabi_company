@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
+import { MailIcon } from "lucide-react";
+
+const contact = {
+    address:
+        "Jln. Raya Bantaran, Desa Kedungsupit, Kec. Wonomerto, Kab.Probolinggo, Jawa Timur",
+    phone: "+62 822-5824-7255",
+    email: "admin@sumberrejeki.co.id",
+    maps: "https://maps.app.goo.gl/JiyJZWT2h6trcSqS8",
+    whatsapp:
+        "https://wa.me/6282258247255?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20tentang%20UD.%20Sumber%20Rejeki.",
+};
+---
+
+<Layout
+    title="Contact - UD. Sumber Rejeki"
+    description="Hubungi UD. Sumber Rejeki untuk informasi lokasi, jam operasional, dan layanan kayu berkualitas."
+>
+    <section class="relative overflow-hidden">
+        <!-- Background -->
+        <div
+            class="absolute inset-0 bg-linear-to-br from-green-50 via-white to-green-100"
+        >
+        </div>
+        <div
+            class="absolute -top-24 -right-24 w-80 h-80 bg-green-300/30 blur-3xl rounded-full"
+        >
+        </div>
+        <div
+            class="absolute -bottom-24 -left-24 w-80 h-80 bg-green-400/20 blur-3xl rounded-full"
+        >
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-5 py-10">
+            <!-- Hero -->
+            <div class="text-center max-w-3xl mx-auto">
+                <p
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-green-700 bg-green-100 px-4 py-2 rounded-full"
+                >
+                    Kontak & Lokasi
+                </p>
+
+                <h1
+                    class="mt-6 text-4xl md:text-5xl font-extrabold text-green-700"
+                >
+                    Hubungi Kami atau Lihat Lokasi
+                </h1>
+
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    Kunjungi lokasi kami atau hubungi langsung untuk informasi
+                    dan konsultasi produk.
+                </p>
+            </div>
+
+            <!-- Content -->
+            <div
+                class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start"
+            >
+                <!-- Contact Info -->
+                <div
+                    class="rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-xl p-8"
+                >
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        Informasi Kontak
+                    </h2>
+
+                    <div class="mt-6 space-y-5 text-gray-700">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-green-700 p-2"
+                            >
+                                <MapPin />
+                            </div>
+                            <div>
+                                <p class="font-semibold">Alamat</p>
+                                <p class="text-sm">{contact.address}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-green-700"
+                            >
+                                <Phone />
+                            </div>
+                            <div>
+                                <p class="font-semibold">Telepon</p>
+                                <p class="text-sm">{contact.phone}</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center text-green-700"
+                            >
+                                <MailIcon />
+                            </div>
+                            <div>
+                                <p class="font-semibold">Email</p>
+                                <p class="text-sm">{contact.email}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a
+                            href={contact.maps}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center rounded-full border border-green-600 px-6 py-3 font-semibold text-green-700 hover:bg-green-50 transition"
+                        >
+                            Lihat di Google Maps →
+                        </a>
+
+                        <a
+                            href={contact.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center rounded-full bg-green-600 px-6 py-3 font-semibold text-white hover:bg-green-700 transition shadow-lg"
+                        >
+                            Chat WhatsApp →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maps Card -->
+                <div
+                    class="rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-xl overflow-hidden"
+                >
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3323.8461421171437!2d113.2007657454394!3d-7.817165648524077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDknMDIuMSJTIDExM8KwMTInMDEuMyJF!5e0!3m2!1sen!2sid!4v1769383543059!5m2!1sen!2sid"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="w-full h-94 border-0"></iframe>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="mt-10">
+                <div
+                    class="rounded-3xl bg-linear-to-r from-green-600 to-green-700 p-10 text-white shadow-2xl text-center"
+                >
+                    <h2 class="text-2xl md:text-3xl font-extrabold">
+                        Datang Langsung atau Hubungi Kami
+                    </h2>
+                    <p class="mt-2 text-white/80 max-w-xl mx-auto">
+                        Kami siap melayani kebutuhan kayu Anda dengan
+                        profesional dan ramah.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

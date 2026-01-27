@@ -1,0 +1,171 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const services = [
+    {
+        icon: "/tree.png",
+        title: "Kayu Gelondongan",
+        desc: "Penyediaan kayu gelondongan pilihan dengan kualitas terjamin dan pasokan stabil.",
+    },
+    {
+        icon: "/stump.png",
+        title: "Kayu Olahan",
+        desc: "Kayu balok, papan, dan kaso siap pakai untuk bangunan dan furnitur.",
+    },
+    {
+        icon: "/tools.png",
+        title: "Jasa Potong Kayu",
+        desc: "Pemotongan kayu sesuai ukuran dan kebutuhan pelanggan secara presisi.",
+    },
+    {
+        icon: "/delivery.png",
+        title: "Pengiriman",
+        desc: "Layanan pengiriman aman, rapi, dan tepat waktu ke lokasi Anda.",
+    },
+];
+---
+
+<Layout
+    title="Services - UD. Sumber Rejeki"
+    description="Pelayanan kami kepada pelanggan, kepuasan pelanggan merupakan tujuan kami."
+>
+    <section class="relative overflow-hidden">
+        <!-- Background -->
+        <div
+            class="absolute inset-0 bg-linear-to-br from-green-50 via-white to-green-100"
+        >
+        </div>
+        <div
+            class="absolute -top-24 -right-24 w-80 h-80 bg-green-300/30 blur-3xl rounded-full"
+        >
+        </div>
+        <div
+            class="absolute -bottom-24 -left-24 w-80 h-80 bg-green-400/20 blur-3xl rounded-full"
+        >
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-5 py-20">
+            <!-- Hero -->
+            <div class="text-center max-w-3xl mx-auto">
+                <p
+                    class="inline-flex items-center gap-2 text-sm font-semibold text-green-700 bg-green-100 px-4 py-2 rounded-full"
+                >
+                    Layanan Kami
+                </p>
+
+                <h1
+                    class="mt-6 text-4xl md:text-5xl font-extrabold text-green-700 leading-tight"
+                >
+                    Solusi Kayu Berkualitas & Terpercaya
+                </h1>
+
+                <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                    UD. Sumber Rejeki menyediakan produk dan layanan kayu dengan
+                    proses profesional, rapi, dan berorientasi pada kepuasan
+                    pelanggan.
+                </p>
+            </div>
+
+            <!-- Services Card -->
+            <div
+                class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            >
+                {
+                    services.map((item, index) => (
+                        <div class="group rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-lg p-6 hover:-translate-y-1 hover:shadow-xl transition">
+                            <div class="w-15 h-15 rounded-2xl flex items-center justify-center bg-green-100 text-green-700 text-2xl">
+                                <img
+                                    src={item.icon}
+                                    alt="icon"
+                                    class="w-12 h-12 object-contain"
+                                />
+                            </div>
+
+                            {/* <p class="mt-4 text-green-700 font-bold">
+                                0{index + 1}
+                            </p> */}
+
+                            <h3 class="mt-2 font-bold text-gray-900 text-lg">
+                                {item.title}
+                            </h3>
+
+                            <p class="mt-2 text-gray-600 text-sm leading-relaxed">
+                                {item.desc}
+                            </p>
+                        </div>
+                    ))
+                }
+            </div>
+
+            <!-- Divider -->
+            <!-- <div class="mt-20 border-t border-gray-200"></div> -->
+
+            <!-- Value Section -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div
+                    class="rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-lg p-8 hover:-translate-y-1 hover:shadow-xl transition"
+                >
+                    <h3 class="text-xl font-bold text-gray-900">
+                        Kualitas Terjaga
+                    </h3>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Proses seleksi bahan dan pengolahan dilakukan dengan
+                        standar mutu yang konsisten.
+                    </p>
+                </div>
+
+                <div
+                    class="rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-lg p-8 hover:-translate-y-1 hover:shadow-xl transition"
+                >
+                    <h3 class="text-xl font-bold text-gray-900">
+                        Proses Profesional
+                    </h3>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Didukung tenaga berpengalaman dan sistem kerja yang rapi
+                        & efisien.
+                    </p>
+                </div>
+
+                <div
+                    class="rounded-3xl bg-white/70 backdrop-blur border border-green-500 shadow-lg p-8 hover:-translate-y-1 hover:shadow-xl transition"
+                >
+                    <h3 class="text-xl font-bold text-gray-900">
+                        Pengiriman Aman
+                    </h3>
+                    <p class="mt-3 text-gray-600 leading-relaxed">
+                        Produk dikemas dan dikirim dengan aman hingga sampai ke
+                        tangan pelanggan.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <!-- <div class="mt-20">
+                <div
+                    class="rounded-3xl bg-linear-to-r from-green-600 to-green-700 p-10 md:p-12 shadow-2xl text-white"
+                >
+                    <div
+                        class="flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+                    >
+                        <div>
+                            <h2 class="text-2xl md:text-3xl font-extrabold">
+                                Butuh Produk atau Jasa Kayu?
+                            </h2>
+                            <p class="mt-2 text-white/80 max-w-xl">
+                                Konsultasikan kebutuhan Anda bersama kami.
+                                Respon cepat & ramah.
+                            </p>
+                        </div>
+
+                        <a
+                            href="/contact"
+                            class="inline-flex justify-center items-center rounded-full bg-white px-6 py-3 font-semibold text-green-700 hover:bg-white/90 transition shadow-lg"
+                        >
+                            Hubungi Kami →
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</Layout>
