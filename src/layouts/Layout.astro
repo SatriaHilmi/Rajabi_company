@@ -11,12 +11,13 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<title>{title}</title>
+		<link rel="canonical" href={Astro.url.href} />
 
 		<meta name="description" content={description} />
 		<meta name="keywords" content={keywords} />
@@ -27,19 +28,26 @@ const {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content={ogImage} />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta
+			property="og:image"
+			content={`https://udsumberrejeki.site${ogImage}`}
+		/>
 		<meta property="og:locale" content="id_ID" />
 
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={description} />
-		<meta name="twitter:image" content={ogImage} />
+		<meta
+			name="twitter:image"
+			content={`https://udsumberrejeki.site${ogImage}`}
+		/>
 
 		<link rel="icon" type="image/png" sizes="32x32" href="/kayu-raja.png" />
 		<link rel="icon" href="/kayu-raja.png" />
 
-		<meta name="generator" content={Astro.generator} />
+		<!-- <meta name="generator" content={Astro.generator} /> -->
 	</head>
 	<body>
 		<Navbar />
