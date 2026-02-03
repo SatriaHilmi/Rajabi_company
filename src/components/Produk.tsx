@@ -34,7 +34,7 @@ export const Produk = () => {
                     return (
                         <div key={index} className={`max-w-4xl rounded-lg overflow-hidden shadow-lg border hover:border-green-500 transition hover:-translate-y-1 hover:scale-105 duration-300 ${isLast && isOdd ? "md:col-span-3 flex justify-center mx-auto" : ""}`
                         }>
-                            <img src={item.img} alt="gambar produk" className={`w-full aspect-square object-cover ${isLast && isOdd ? "md:max-w-95" : ""}`} />
+                            <img src={item.img} alt="gambar produk" className={`w-full aspect-square object-cover ${isLast && isOdd ? "md:max-w-96" : ""}`} />
                         </div>
                     )
                 })}
